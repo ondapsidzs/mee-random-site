@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;900&family=Roboto:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="contact_style.css">
+    <title>Mee Contact</title>
+</head>
+
+<body>
+
+    <img src="img/vector1.png" alt="vector1" id="vector1">
+    <img src="img/vector2.png" alt="vector2" id="vector2">
+    <img src="img/vector3.png" alt="vector3" id="vector3">
+
+    <main id="header-container" class="flex flex-col">
+
+        <img src="img/bg1.jpg" id="header-bg" class="">
+
+        <nav id="header-nav" class="flex flex-jc-sb flex-ai-c width-90">
+
+            <img src="img/logo.png" alt="" id="header-logo">
+
+            <ul id="header-links" class="font-Montserrat flex show">
+
+                <li><a href="index.html" class="header-link">Home</a></li>
+                <li><a href="gallery.html" class="header-link">Gallery</a></li>
+                <li><a href="about.html" class="header-link">About</a></li>
+                <li><a href="contact.html" class="header-link">Contact Me</a></li>
+
+            </ul>
+
+            <img src="img/menu.png" alt="menu" id="menu" class="" onclick="menuClick(event)">
+            <img src="img/close.png" alt="menu" id="close" class="hide" onclick="menuClick(event)">
+
+        </nav>
+
+        <img src="img/phone.png" alt="phone" id="phone">
+
+        <div class="flex flex-col width-80" id="content1">
+
+            <div>Contact Me</div>
+
+            <ul>
+
+                <li><img src="img/insta.png" alt=""></li>
+                <li><img src="img/twit.png" alt=""></li>
+                <li><img src="img/fb.png" alt=""></li>
+
+            </ul>
+
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

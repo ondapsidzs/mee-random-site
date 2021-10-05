@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;900&family=Roboto:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="gallery_style.css">
+    <title>Mee Gallery</title>
+</head>
+
+<body>
+
+    <img src="img/vector1.png" alt="vector1" id="vector1">
+    <img src="img/vector2.png" alt="vector2" id="vector2">
+    <img src="img/vector3.png" alt="vector3" id="vector3">
+
+    <main id="header-container" class="flex flex-col">
+
+        <img src="img/bg1.jpg" id="header-bg" class="">
+
+        <nav id="header-nav" class="flex flex-jc-sb flex-ai-c width-90">
+
+            <img src="img/logo.png" alt="" id="header-logo">
+
+            <ul id="header-links" class="font-Montserrat flex show">
+
+                <li><a href="index.html" class="header-link">Home</a></li>
+                <li><a href="gallery.html" class="header-link">Gallery</a></li>
+                <li><a href="about.html" class="header-link">About</a></li>
+                <li><a href="contact.html" class="header-link">Contact Me</a></li>
+
+            </ul>
+
+            <img src="img/menu.png" alt="menu" id="menu" class="" onclick="menuClick(event)">
+            <img src="img/close.png" alt="menu" id="close" class="hide" onclick="menuClick(event)">
+
+        </nav>
+
+        <section id="section-container" class="flex flex-col width-80">
+
+            <h2 id="gallery-heading" class="font-Montserrat">Gallery</h2>
+
+            <div id="section-content" class="flex">
+
+                <img src="img/e-vector.png" alt="e-vector" id="e-vector">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc proin quam sed netus sed eros, gravida
+                    consectetur. Porta sit egestas venenatis amet elementum. Et scelerisque massa non netus laoreet
+                    egestas eget euismod nunc. Sit ut in et aenean donec porttitor auctor.
+                </p>
+
+            </div>
+
+            <div id="gallery-grid">
+
+                <div class="gallery-image" id="one">
+                    <span class="overlay1">
+                        <h5 class=" font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="two">
+                    <span class="overlay2">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="three">
+                    <span class="overlay3">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="four">
+                    <span class="overlay4">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="five">
+                    <span class="overlay5">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="six">
+                    <span class="overlay6">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="seven">
+                    <span class="overlay7">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="eight">
+                    <span class="overlay8">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="nine">
+                    <span class="overlay9">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="ten">
+                    <span class="overlay10">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="eleven">
+                    <span class="overlay11">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+                <div class="gallery-image" id="twelve">
+                    <span class="overlay12">
+                        <h5 class="font-Montserrat">Lorem Ipsum</h5>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </span>
+                </div>
+
+            </div>
+
+            <footer class="flex flex-jc-sb">
+
+                <div class="line"></div>
+                <img src="img/logo.png" alt="logo" id="footer-logo">
+                <div class="line"></div>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

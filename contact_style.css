@@ -1,0 +1,422 @@
+:root{
+    --fadeBlack:rgb(20,20,20);
+    --darkGray:rgb(100, 100, 100);
+    --dirtyWhite:rgb(255,255,255);
+}
+html{
+    scrollbar-color: var(--darkGray) var(--dirtyWhite);
+    scrollbar-width: thin;
+}
+li{
+    list-style-type: none;
+}
+a{
+    display:inline-block;
+    text-decoration: none;
+    color:var(--fadeBlack);
+}
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:var(--fadeBlack);
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    font:100%;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+
+/* Classes*/
+.flex{
+    display:flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-jc-fs{
+    justify-content: flex-start;
+}
+.flex-jc-c{
+    justify-content: center;
+}
+.flex-jc-sb{
+    justify-content: space-between;
+}
+.flex-jc-se{
+    justify-content: space-evenly;
+}
+.flex-ai-fs{
+    align-items:flex-start;
+}
+.flex-ai-c{
+    align-items: center;
+}
+.width-90{
+    max-width:1400px;
+    width:90%;
+    margin:0 auto;
+}
+.width-80{
+    max-width:1200px;
+    width:80%;
+    margin:0 auto;
+}
+.font-Montserrat{
+    font-family: 'Montserrat',sans-serif;
+}
+.saturate-100{
+    filter:blur(2px) saturate(100%) !important;
+}
+
+
+.header-link{
+    position: relative;
+    margin-left:50px;
+    font-weight:300;
+    transition: 0.2s all ease-in-out;
+}
+.header-link::after{
+    content: "";
+    display:block;
+    position:absolute;
+    /* top:calc(100% + 10px); */
+    top:calc(100% + 5px);
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:0%;
+    height:1.5px;
+    background-color:var(--fadeBlack);
+    /* background-image: linear-gradient(to right,red,blue); */
+    transition:0.2s width ease-in-out,0.2s transform ease-in-out;
+}
+.header-link:hover{
+    opacity: 60%;
+}
+.header-link:hover::after{
+    opacity: 60%;
+    width:100%;
+    /* transform: translateX(-50%); */
+}
+.hide{
+    display: none !important;; 
+}
+
+
+
+
+
+/* ID */
+#header-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 10%;
+    z-index: -10;
+    filter: saturate(0%);
+}
+#header-bg.fadein{
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+#header-nav{
+    padding:30px 0;
+}
+#header-logo{
+    height:80px;
+    width:auto;
+}
+#menu{
+    display:none;
+    position:absolute;
+    top:30px;
+    right:30px;
+    height:30px;
+    width:auto;
+}
+#close{
+    display:none;
+    position:absolute;
+    top:30px;
+    right:30px;
+    height:30px;
+    width:auto;
+}
+#vector1{
+    --degrees:0deg;
+    position: absolute;
+    height:500px;
+    width:auto;
+    bottom: 0;
+    transform:translate(-50%,50%) rotate(var(--degrees));
+    z-index: -10;
+    opacity: 30%;
+    transition: 1s all ease-in-out;
+}
+#vector2{
+    --degrees:0deg;
+    position: absolute;
+    height:500px;
+    width:auto;
+    right:0;
+    top:50%;
+    transform: translate(20%,-50%) rotate(var(--degrees));
+    z-index:-10;
+    transition: 1s all ease-in-out;
+}
+#vector3{
+    --ny:0;
+    position: absolute;
+    top:20%;
+    height:20%;
+    width:10%;
+    object-position: center;
+    object-fit: cover;
+    transform: translate(-20%,var(--ny));
+    transition: 1s all ease-in-out;
+}
+#phone{
+    z-index: -10;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-40%,-40%);
+    width:1000px;
+    height:auto;
+    transition: 0.6s all ease-in-out;
+}
+#phone:hover{
+    transform:translate(-40%,-40%) rotate(-5deg);
+}
+#content1>div{
+    font-family:'Montserrat',sans-serif;
+    font-weight:900;
+    text-transform: uppercase;
+    font-size:10rem;
+}
+#content1>ul{
+    display:flex;
+}
+#content1>ul li img{
+    padding-right:30px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+}
+#content1>ul li img:hover{
+    transform:translate(0,-5px);
+    opacity: 60%;
+}
+
+
+/* Media Queries */
+@media(orientation:portrait) and (max-width:1024px){
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #header-logo{
+        height:40px;
+        width:auto;
+    }
+    #header-links{
+        display:none;
+        flex-direction: column;
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: var(--dirtyWhite);
+        width: 100vw;
+        height:100vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .header-link{
+        font-size:1.5rem;
+        padding:20px 0;
+    }
+    #menu{
+        display:block;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        z-index: 100;
+    }
+    #menu:hover{
+        opacity: 80%;
+        transform: scale(1.1);
+    }
+    #close{
+        display:block;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        z-index: 100;
+    }
+    #close:hover{
+        opacity: 80%;
+        transform: scale(1.1);
+    }
+    #section-div-1-home{
+        font-size:1rem;
+    }
+    #section-div-1-h1{
+        font-size:4rem;
+        line-height: 3rem;
+        word-break: break-all;
+        margin-bottom: 1rem;
+    }
+    #section{
+        flex-direction: column;
+        padding-bottom: 5rem;
+    }
+    #section-div-1 {
+        width: 100%;
+        margin-right:0;
+        margin-bottom: 3rem;
+    }
+    #section-div-2{
+        height: auto;
+        width:100%;
+        flex-direction: column;
+    }
+    #section-div-2-img{
+        display:block;
+        height:800px;
+        width:100%;
+        margin-right:0;
+        margin-bottom:2rem;
+    }
+    #section-div-2-slider{
+        display:flex;
+        width:100%;
+        height:100px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .img-slider-image{
+        width: 100px;
+        height: auto;
+        cursor:unset;
+    }
+    #vector1{
+        --degrees:0deg;
+        position: fixed;
+        height:500px;
+        width:auto;
+        bottom: 0;
+        transform:translate(-50%,50%) rotate(var(--degrees));
+        z-index: -10;
+        opacity: 30%;
+        transition: 1s all ease-in-out;
+    }
+    #vector2{
+        --degrees:0deg;
+        position: fixed;
+        height:300px;
+        width:auto;
+        right:0;
+        top:50%;
+        transform: translate(20%,-50%) rotate(var(--degrees));
+        z-index:-10;
+        transition: 1s all ease-in-out;
+    }
+    #vector3{
+        display:none;
+    }
+}
+@media (max-width:991px){
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #header-logo{
+        height:40px;
+        width:auto;
+    }
+    #header-links{
+        display:none;
+        flex-direction: column;
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: var(--dirtyWhite);
+        width: 100vw;
+        height:100vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .header-link{
+        font-size:1.5rem;
+        padding:20px 0;
+    }
+    #menu{
+        display:block;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        z-index: 100;
+    }
+    #menu:hover{
+        opacity: 80%;
+        transform: scale(1.1);
+    }
+    #close{
+        display:block;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        z-index: 100;
+    }
+    #close:hover{
+        opacity: 80%;
+        transform: scale(1.1);
+    }
+    #vector1{
+        --degrees:0deg;
+        position: fixed;
+        height:500px;
+        width:auto;
+        bottom: 0;
+        transform:translate(-50%,50%) rotate(var(--degrees));
+        z-index: -10;
+        opacity: 30%;
+        transition: 1s all ease-in-out;
+    }
+    #vector2{
+        --degrees:0deg;
+        position: fixed;
+        height:300px;
+        width:auto;
+        right:0;
+        top:50%;
+        transform: translate(20%,-50%) rotate(var(--degrees));
+        z-index:-10;
+        transition: 1s all ease-in-out;
+    }
+    #vector3{
+        display:none;
+    }
+    #content1>div{
+        font-family:'Montserrat',sans-serif;
+        font-weight:900;
+        text-transform: uppercase;
+        font-size:5rem;
+        line-height: 4rem;
+        padding-top:100px;
+    }
+    #content1>ul{
+        display:flex;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    #content1>ul li{
+        padding-bottom:20px;
+    }
+}

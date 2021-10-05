@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;900&family=Roboto:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mee</title>
+</head>
+
+<body>
+
+    <img src="img/vector1.png" alt="vector1" id="vector1">
+    <img src="img/vector2.png" alt="vector2" id="vector2">
+    <img src="img/vector3.png" alt="vector3" id="vector3">
+
+    <main id="header-container" class="flex flex-col">
+
+        <img src="img/img1.jpg" id="header-bg" class="">
+
+        <nav id="header-nav" class="flex flex-jc-sb flex-ai-c width-90">
+
+            <img src="img/logo.png" alt="" id="header-logo">
+
+            <ul id="header-links" class="font-Montserrat flex show">
+
+                <li><a href="index.html" class="header-link">Home</a></li>
+                <li><a href="gallery.html" class="header-link">Gallery</a></li>
+                <li><a href="about.html" class="header-link">About</a></li>
+                <li><a href="contact.html" class="header-link">Contact Me</a></li>
+
+            </ul>
+
+            <img src="img/menu.png" alt="menu" id="menu" class="" onclick="menuClick(event)">
+            <img src="img/close.png" alt="menu" id="close" class="hide" onclick="menuClick(event)">
+
+        </nav>
+
+        <section id="section" class="flex flex-jc-sb width-80">
+
+            <div id="section-div-1" class="flex flex-col">
+
+                <div id="section-div-1-home">Home</div>
+
+                <h1 id="section-div-1-h1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h1>
+
+                <p id="section-div-1-p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id id feugiat nam. Ac pulvinar habitant
+                    ipsum lectus odio consequat. Eros nec orci cras sit sem nunc.
+                </p>
+
+            </div>
+
+            <div id="section-div-2" class="flex flex-jc-sb">
+
+                <img src="img/img1.jpg" alt="" id="section-div-2-img">
+
+                <div id="section-div-2-slider">
+
+                    <img src="img/img1.jpg" alt="" class="img-slider-image saturate-100"
+                        onclick="imageClick('img/img1.jpg');saturate()">
+                    <img src="img/img2.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img2.jpg');saturate()">
+                    <img src="img/img3.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img3.jpg');saturate()">
+                    <img src="img/img4.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img4.jpg');saturate()">
+                    <img src="img/img5.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img5.jpg');saturate()">
+                    <img src="img/img6.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img6.jpg');saturate()">
+                    <img src="img/img7.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img7.jpg');saturate()">
+                    <img src="img/img8.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img8.jpg');saturate()">
+                    <img src="img/img9.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img9.jpg');saturate()">
+                    <img src="img/img10.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img10.jpg');saturate()">
+                    <img src="img/img11.jpg" alt="" class="img-slider-image"
+                        onclick="imageClick('img/img11.jpg');saturate()">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
